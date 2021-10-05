@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    This :)
+    <script>
+        // this keyword in web/browser non-strict 
+
+        // 1.globally
+        console.log(this);    // return window obj
+
+
+        function help() {
+            // inside function
+            console.log(this); // return window obj
+        }
+
+        help();
+
+        let obj = {
+            name: "Ram",
+            fun: function () {
+                console.log(this);
+
+                function insideFun() {
+                    console.log(this);
+                }
+
+                // 4.Obj fun fun
+                insideFun(); // return window obj
+            }
+        }
+
+        // 3.Obj fun
+        obj.fun();   // return obj
+
+    </script>
+</body>
+</html>
