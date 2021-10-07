@@ -6,7 +6,7 @@ console.log(this);    // return empty obj {}
 
 
 function help() {
-    // inside function
+    // 2.inside function
     console.log(this); // return undefined
 }
 
